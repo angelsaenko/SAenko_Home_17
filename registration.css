@@ -1,0 +1,40 @@
+body{
+    margin:0 0 20px 20px;
+    width: 1024px;
+    font-family: "Times New Roman",Arial,sans-serif;
+    font-size:14px;
+}
+.bold{
+    font-weight: bold;
+}
+.fieldset{
+    margin:10px 10px 0 0;
+}
+.italic{;
+}
+.padding{
+    padding-left: 5px;
+}
+.wrap{
+    margin: 0;
+    padding-right:10px;
+    float: left;
+}
+.list{
+    list-style-type:none;
+    margin:0;
+    padding: 0 0 5px 0;
+}
+.aboutmysels{
+    font-size: 12px;
+    margin: 0;
+}
+.list li{
+    padding-bottom:5px;
+}
+li label{
+    padding-left:5px;
+}
+.myself li input{
+    width:150px;
+}

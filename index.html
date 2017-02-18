@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Реестрация</title>
+    <link rel="stylesheet" type="text/css" href="registration.css">
+</head>
+<body>
+<h1>Урок "Формы": теги и их атрибуты</h1>
+<h2>Расскажите немного о себе...</h2>
+<p>Попробуйте создать аналогичную форму. Для целей демонстрации вполне подойдут и вымышленые </p>
+<form action="scripts/formdata.php" method="POST">
+    <fieldset class="fieldset">
+        <legend class="bold">Кратко о себе</legend>
+        <ul class="list">
+            <li><input type="text" name="first_name" id="first_name"><label for="first_name">Имя</label></li>
+            <li><input type="text" name="last_name" id="last_name"><label for="last_name">Фамилия</label></li>
+            <li><input type="text" name="login" id="login"><label for="login">Логин</label></li>
+            <li><input type="password" name="password" id="password"><label for="password">Пароль</label></li>
+        </ul>
+        <p>Пол:<input type="radio" name="gender" value="male" id="gender_1" checked><label for="gender_1">Мужской</label>
+            <input type="radio" name="gender" value="female" id="gender_2"><label for="gender_2">Женский</label></p>
+        <p><label for="age">Возраст:</label> <input type="text" name="age" size="3" maxlength="3" id="age"
+                                                    ><span class="padding">лет</span></p>
+    </fieldset>
+    <fieldset class="fieldset">
+        <legend class="legend bold">Подробнее о себе</legend>
+        <div class="aboutmysels general">
+            <ul class="list">
+                <li><input type="radio" name="person" value="man" id="person_1" checked><label for="person_1">Молодой
+                    человек</label></li>
+                <li><input type="radio" name="person" value="woman" id="person_2"><label for="person_2">Девушка</label>
+                </li>
+            </ul>
+            <ul class="list myself">
+                <li><input type="date" name="birthday" id="birthday"><label for="birthday">Дата
+                    рождения</label></li>
+                <li><input type="text" name="married" size="15" id="married"><label for="married">Семейное
+                    положение</label></li>
+                <li><input type="text" name="social" size="15" id="social"><label for="social">Социальный статус</label>
+                </li>
+                <li><input type="text" name="location" size="15" id="location"><label for="location">Место
+                    жительство </label></li>
+            </ul>
+        </div>
+        <p class="bold">Что вы обычно делаете на выходных:</p>
+        <ul class="list">
+            <li><input type="checkbox" name="weekend" value="sleep" id="weekend_1"><label for="weekend_1">Сплю</label>
+            </li>
+            <li><input type="checkbox" name="weekend" value="walking" id="weekend_2"><label for="weekend_2">Гуляю с
+                друзьями</label></li>
+            <li><input type="checkbox" name="weekend" value="fishing" id="weekend_3"><label for="weekend_3">Хожу на
+                рыбалку</label></li>
+            <li><input type="checkbox" name="weekend" value="games" id="weekend_4"><label for="weekend_4">Играю в
+                игры</label></li>
+        </ul>
+        <p class="bold">Сколько книг вы прочитали за свою жизнь: </p>
+        <ul class="list">
+            <li><input type="radio" name="book_range" value="0-10" id="book_range_1" checked><label for="book_range_1">0-10</label>
+            </li>
+            <li><input type="radio" name="book_range" value="11-20" id="book_range_2"><label
+                    for="book_range_2">11-20 </label></li>
+            <li><input type="radio" name="book_range" value="21-50" id="book_range_3"><label
+                    for="book_range_3">21-50</label></li>
+            <li><input type="radio" name="book_range" value="50+" id="book_range_4"><label
+                    for="book_range_4">50+</label></li>
+        </ul>
+        <p class="bold"><label for="text">Ваши коментарии</label></p>
+        <p><textarea cols="40" rows="6" id="text" placeholder="Введите коментраии..."></textarea>
+        <p class="bold wrap"> <label for="education">Выбрать типы учебных заведений которые вы окончили:</label></p>
+        <select name="education" id="education" multiple size="3">
+            <option>школа</option>
+            <option>техникум</option>
+            <option>университет</option>
+        </select>
+        <p class="bold"><label for="study">Сколько часов каждый день вы тратите на изучение вёрстки</label>
+            <select name="study" id="study">
+                <option>0</option>
+                <option selected>2-3</option>
+                <option>3+</option>
+            </select>
+    </fieldset>
+    <fieldset class="fieldset">
+        <legend class="bold">И в заключении</legend>
+        <p class="bold"><label for="email"">Email:</label>
+            <input type="email" name="email" size="30" id="email"></p>
+        <p></p>
+        <p class="bold">Хотите подписаться на рассылку спама?</p>
+        <p class="italic">Выберите категории</p>
+        <ul class="list">
+            <li><input type="checkbox" name="subscribe" value="html" id="subscribe_1"><label for="subscribe_1">Обучение
+                html</label></li>
+            <li><input type="checkbox" name="subscribe" value="css" id="subscribe_2"><label for="subscribe_2">Обучение
+                css</label></li>
+            <li><input type="checkbox" name="subscribe" value="php" id="subscribe_3"><label for="subscribe_3">Обучение
+                php</label></li>
+            <li><input type="checkbox" name="subscribe" value="protocol" id="subscribe_4"><label for="subscribe_4">Основные
+                протоколы</label></li>
+        </ul>
+        <p class="bold">Актуальны ли все вопроссы при заполнении формы для реестрации?</p>
+        <ul class="list">
+            <li><input type="radio" name="relevance" value="actualy" id="relevance_1" checked><label for="relevance_1">Актуальны</label>
+            </li>
+            <li><input type="radio" name="relevance" value="too much" id="relevance_2"><label for="relevance_2">Нужно
+                уменьшить</label></li>
+            <li><input type="radio" name="relevance" value="not interesting" id="relevance_3"><label for="relevance_3">Мне
+                все-равно</label></li>
+        </ul>
+    </fieldset>
+    <p><input type="image" src="images/ibutton.png" alt="send"></p>
+</form>
+</body>
+</html>
